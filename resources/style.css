@@ -1,0 +1,321 @@
+body {
+  background-color: #F0F0F0;
+}
+
+.container-nav {
+  display: grid;
+  grid-template-areas: "nav nav nav nav";
+  font-family: verdana, Arial, Helvetica, sans-serif;
+}
+
+nav {
+  grid-area: nav;
+  color: white;
+  cursor: pointer;
+}
+
+nav .top{
+  background-color: #1D4ED8;
+  display: flex!important;
+  opacity: 1!important;
+  padding: 15px 10px 14px 10px;
+}
+
+nav .top div {
+  display: inline-block;
+  vertical-align: top;
+}
+
+nav .links {
+  margin: 0;
+  list-style: none;
+  padding: 3.5px 16px 5.5px 16px;
+  background-color: #60A5FA;
+  text-align: center;
+}
+
+nav .links li {
+  display: inline-block;
+  min-height: 1.4em;
+  text-decoration: none;
+  color: white;
+  font-size: max(0.98em, 12px);
+  cursor: pointer;
+}
+
+nav .top .center {
+  text-align: center;
+  flex: 1;
+}
+
+
+.container-main {
+  display: grid;
+  height: 100vh;
+  grid-gap: 0.4rem;
+  padding-top: .5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: #F0F0F0;
+  grid-template-columns: .5fr 1fr;
+  grid-template-rows: 1fr .8fr .8fr .3fr;
+  grid-template-areas: 
+  "profile about"
+  "contact experience"
+  "skills projects"
+  "footer footer";
+}
+
+
+#profile {
+  grid-area: profile;
+  background-color: #FFEFF1;
+  border: #EFFFFD solid;
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+h2 {
+  color:#525252;
+  text-decoration: underline;
+  font-Family: 'Roboto Condensed', Sans-Serif;
+  font-size: 30px;
+  margin-top: 0;
+}
+
+h3 {
+  color:#525252;
+  text-decoration: underline;
+  font-Family: 'Roboto Condensed', Sans-Serif;
+  font-size: 30px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.profile-left {
+  margin-left: 10px;
+}
+
+.profile-left h5 {
+  color:#525252;
+  text-decoration: underline;
+  font-family: 'Cabin', Sans-Serif;
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#profile-pic {
+  height: 250px;
+  width: 200px;
+}
+
+.profile-right {
+  width: 150px; 
+  height: 100px;
+}
+
+.item-right {
+  color:#525252;
+  padding: 2px;
+}
+
+#status {
+  margin-top: 50%;
+}
+
+
+.item-right p {
+  font: 16px 'Cabin', Sans-Serif;
+}
+
+
+#contact {
+  grid-area: contact;
+  background-color: #FFEFF1;
+  border: #EFFFFD solid;
+  margin: 10%;
+  text-align: center;
+}
+
+
+.contact-icon {
+  width: 35px;
+  height: 35px;
+  
+}
+
+.contact-links {
+  margin-top: 0;
+}
+
+.contact-link {
+  color: #525252;
+}
+
+#github {
+  margin-bottom: 5px;
+}
+
+#skills {
+  grid-area: skills;
+  background-color: #FFEFF1;
+  border: #EFFFFD solid;
+  
+
+}
+
+
+
+#about {
+  grid-area: about;
+  background-color: #FFEFF1;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.banner {
+  border: #EFFFFD solid;
+  width: 95%;
+  height: 90px;
+  align-self: center;
+  
+}
+
+.banner h4 {
+color:#525252;
+text-align: center;
+font-family: 'Roboto Condensed', Sans-Serif;
+}
+
+.banner p{
+text-align: center;
+font-family: 'Cabin', Sans-Serif;
+text-decoration: underline;
+cursor: pointer;
+}
+
+.blurbs {
+width: 95%;
+align-self: center;
+}
+
+
+#blurb-heading {
+font-family: 'Roboto Condensed', Sans-Serif;
+color:#525252;
+background-color: #EFF9FF;
+width: 100%;
+height: 10%;
+padding-left: 5px;  
+padding-top: 10px;
+font-size: 17px;
+}
+
+.about-me-heading {
+font-family: 'Roboto Condensed', Sans-Serif;
+color:#525252;
+font-weight: bold;
+margin-bottom: 0;
+padding-left: 5px;
+
+}
+
+.text {
+font-family: 'Cabin', Sans-Serif;
+color:#525252;
+font-size: 14px;
+padding-left: 5px;
+
+}
+
+#experience {
+  grid-area: experience;
+  background-color: #FFEFF1;
+  width: 80%;
+} 
+
+#projects {
+  grid-area: projects;
+  background-color: #FFEFF1;
+  border: #EFFFFD solid;
+  width: 80%;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #E2E5E6;
+  width: 87%;
+}
+
+footer h5 {
+  color:#525252;
+  font-family: 'Cabin', Sans-Serif;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+
+/*
+@media only screen and (max-width: 550px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.1fr 0.5fr 0.1fr 0.1fr 0.1fr;
+    grid-template-areas:
+    "nav"
+    "profile"
+    "about"
+    "contact"
+    "skills"
+    "experience"
+    "projects"
+    "footer";
+  }
+  .profile-right, h5 {
+    display: none;
+  }
+
+
+  .profile-left {
+    display: block;
+    width: 400px;
+  }
+
+  #contact {
+    display: flex;
+    justify-content: center;
+  }
+
+  #contact h3 {
+    display: none;
+  }
+}
+*/
